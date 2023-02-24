@@ -1,0 +1,14 @@
+{% extends 'core/base_layout.html' %}
+{% load static %}
+
+{% block meta %}
+    <link rel="stylesheet" href="{% static 'styles/products.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<img src="{% static 'images/cow.png' %}" height="400">
+
+<h6 class="cow">Самое свежее молоко от счастливых коров которые едят самую сочную траву</h6>
+
+{% endblock %}

@@ -1,2 +1,3 @@
-# django-fi
-Первый проект на django
+# django-first
+Первый проект django
+

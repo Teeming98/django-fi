@@ -1,0 +1,39 @@
+{% extends 'core/base_layout.html' %}
+{% load static %}
+{% block meta %}
+    <link rel="stylesheet" href="{% static 'styles/products.css' %}">
+{% endblock %}
+
+{% block content %}
+<article class="product">
+    <h3>{{ product.name }}</h3>
+
+    <div>
+        <img
+        height="300"
+        {% if product.category is None %}
+            src="{% static 'images/placeholder.png' %}"
+        {% else %}
+            src="{{product.image.url}}"
+        {% endif %}
+        alt="Изображение"
+        >
+    </div>
+
+    <p>Категория: {{ product.category }}</p>
+    <p>Цена: {{ product.cash }}</p>
+    <p>Скидка: {{ product.sale }}</p>
+    <p>Количество: {{ product.cnt }}</p>
+    <p>Ряд: {{ product.row }}</p>
+    <p>Дата изготовления: {{ product.dater }}</p>
+    {% if product.category.name == 'Молочка' %}
+        <a class="product_link" href="{% url 'cow_view' %}">Перейти на страницу поставщика</a>
+    {% endif %}
+    <br>
+    {% if product.cnt != 0 %}
+        <a class="product_link" href="{% url 'make_order' product_id=product.id %}">Купить</a>
+    {% else %}
+        <p><strong>Товар закончился</strong></p>
+    {% endif %}
+</article>
+{% endblock %}

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.header{
+    background-color: rgb(204, 37, 45);
+    padding: 20px;
+}
+
+.logo {
+    padding-left: 100px;
+    font-weight: bold;
+    padding-right: 25px;
+}
+
+.navmenu {
+    display: inline;
+}
+
+.content {
+    padding-left: 30%;
+    background-color: rgb(199, 111, 29);
+    padding-right: 30%;
+}
+
+.foter {
+    background-color: rgb(204, 37, 45);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nav_link:hover {
+    color: rgb(0, 0, 0);
+}
+
+.nav_link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}

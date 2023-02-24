@@ -1,0 +1,26 @@
+{% extends 'core/base_layout.html' %}
+{% load static %}
+{% block meta %}
+    <link rel="stylesheet" href="{% static 'styles/make_order.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form class="form" action="{% url 'make_order' product_id=product.id %}" method="POST">
+        {{ error }}
+        {% for input in form %}
+        <div >
+            <label for="{{ input.id_for_label }}">{{ input.label }}</label>
+        </div>
+        
+        {{ input }}
+        
+        <p>
+            {{ input.errors }}
+        </p>
+        {% endfor %}
+        <div>
+            <button class="order-button" type="submit">Заказать</button>
+        </div>
+    </form>
+
+{% endblock %}

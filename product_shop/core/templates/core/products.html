@@ -1,0 +1,36 @@
+{% extends 'core/base_layout.html' %}
+{% load static %}
+{% block meta %}
+    <link rel="stylesheet" href="{% static 'styles/products.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'products' %}" method="GET">
+    <label for="form-category">
+    <input type="text" name="category" id="form-category" class="input_category">
+    <button class="button_category" type="sumbit">Найти</button>
+</form>
+
+{% for product in products %}
+    <article class="products">    
+        <h3>{{ product.name }}</h3>
+        <p>Цена: {{ product.cash }}</p>
+        <p>Категория: {{ product.category }}</p>
+        <p>Скидка: {{ product.sale }}</p>
+        <img
+        height="250"
+        {% if product.category is None %}
+            src="{% static 'images/placeholder.png' %}"
+        {% else %}
+            src="{{ product.image.url }}"
+        {% endif %}
+        
+        >
+        <br>
+        <a class="product_link" href="{% url 'product' id=product.id %}">Перейти к товару</a>
+    </article>
+ 
+{% endfor %}
+
+{% endblock %}
