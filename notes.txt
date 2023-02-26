@@ -4,3 +4,21 @@ python -m venv env
 . ./env/bin/activate
 pip install -r requirements.txt
 vim
+/home/Teeming/ . . /product_shop
+import os
+import sys
+
+## assuming your django settings file is at '/home/Teeming/mysite/mysite/settings.py'
+## and your manage.py is is at '/home/Teeming/mysite/manage.py'
+path = '/home/Teeming/django-fi/product_shop'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'app.settings'
+
+## then:
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+/home/Teeming/django-fi/env
+/static/     /home/Teeming/django-fi/product_shop/core/static
+/media/      /home/Teeming/django-fi/product_shop/static/media
