@@ -5,6 +5,7 @@ python -m venv env
 pip install -r requirements.txt
 vim
 /home/Teeming/ . . /product_shop
+
 import os
 import sys
 
@@ -19,6 +20,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'app.settings'
 ## then:
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
+
 /home/Teeming/django-fi/env
 /static/     /home/Teeming/django-fi/product_shop/core/static
 /media/      /home/Teeming/django-fi/product_shop/static/media
