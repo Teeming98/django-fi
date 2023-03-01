@@ -28,6 +28,8 @@
     <p>Дата изготовления: {{ product.dater }}</p>
     {% if product.category.name == 'Молочка' %}
         <a class="product_link" href="{% url 'cow_view' %}">Перейти на страницу поставщика</a>
+    {% elif product.name == 'Грустные гвозди' %}
+        <a class="product_link" href="{% url 'govz_view' %}">Перейти на страницу поставщика</a>
     {% endif %}
     <br>
     {% if product.cnt != 0 %}

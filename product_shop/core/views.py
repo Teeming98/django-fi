@@ -92,5 +92,9 @@ def make_order_view(request: HttpRequest, product_id: int):
 
 def cow_view(request: HttpRequest):
     if request.method == 'GET':
-        return render(request, 'core/cow.html')
+        return render(request, 'core/cow.html', {'title': 'Корова'})
+    
+def govz_view(request: HttpRequest):
+    if request.method == 'GET':
+        return render(request, 'core/govz.html', {'tirle': 'Говзич'})
     
