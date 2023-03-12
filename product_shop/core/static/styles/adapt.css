@@ -1,0 +1,27 @@
+@media only screen and (max-width: 370px) {
+	.imgp {
+        height: 175px;
+    }
+
+	.imgc {
+        height: 220px;
+    }
+
+    .content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .input_category {
+        margin-bottom: 15px;
+    }
+    
+    .button_category {
+        margin-top: 0px;
+    }
+
+    .foter{
+        font-size: 24px;
+    }
+
+}

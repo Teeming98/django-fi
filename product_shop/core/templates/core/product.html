@@ -2,6 +2,7 @@
 {% load static %}
 {% block meta %}
     <link rel="stylesheet" href="{% static 'styles/products.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/adapt.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -10,7 +11,7 @@
 
     <div>
         <img
-        height="300"
+        class="imgp"
         {% if product.category is None %}
             src="{% static 'images/placeholder.png' %}"
         {% else %}
