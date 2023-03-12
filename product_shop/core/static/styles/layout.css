@@ -44,3 +44,12 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
+.ad_link:hover {
+    color: rgb(0, 0, 0);
+}
+
+.ad_link {
+    text-decoration: none;
+    color: rgb(204, 37, 45);
+}
