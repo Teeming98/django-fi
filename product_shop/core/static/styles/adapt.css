@@ -1,9 +1,46 @@
-@media only screen and (max-width: 370px) {
-	.imgp {
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .imgp {
+        height: 230px;
+    }
+
+    .imgc {
+        height: 450px;
+    }
+
+    .content {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    .content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .imgc {
+        height: 350px;
+    }
+    
+    .logo {
+        margin-left: 50px;
+    }
+    
+    .navmenu {
+        margin-left: 70px;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .imgp {
         height: 175px;
     }
 
-	.imgc {
+    .imgc {
         height: 220px;
     }
 
@@ -22,6 +59,13 @@
 
     .foter{
         font-size: 24px;
+    }
+    
+    .navmenu {
+        margin-left: 0px;
+    }
+    .logo {
+        margin-left: 0px;
     }
 
 }
