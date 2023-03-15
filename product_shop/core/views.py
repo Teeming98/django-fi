@@ -4,6 +4,7 @@ from django.urls import reverse
 from .models import Product, Category, Order
 from django.db.models import Q
 from .forms import OrderForm
+from datetime import datetime
 
 
 def index_view(request: HttpRequest):
@@ -80,8 +81,10 @@ def make_order_view(request: HttpRequest, product_id: int):
             return redirect(reverse('product', kwargs={'id': product_id}))
 
         try:
+            now = datetime.now()
             order = form.save(commit=False)
             order.product = get_product(product_id)
+            order.rt = f'{now.date()} {now.time()}'
             order.save()
             return redirect(reverse('products'))
         except Exception as e:

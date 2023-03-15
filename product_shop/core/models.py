@@ -41,3 +41,4 @@ class Order(models.Model):
         null=False,
         verbose_name='Продукт'
     )
+    rt = models.DateTimeField(verbose_name='Время', null=False)
