@@ -25,3 +25,4 @@ application = get_wsgi_application()
 /home/Teeming/django-fi/env
 /static/     /home/Teeming/django-fi/product_shop/core/static
 /media/      /home/Teeming/django-fi/product_shop/static/media
+/static/     /home/Teeming/django-fi/env/lib/python3.10/site-packages/django/contrib/admin/static
