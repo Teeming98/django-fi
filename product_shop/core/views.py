@@ -5,6 +5,7 @@ from .models import Product, Category, Order
 from django.db.models import Q
 from .forms import OrderForm
 from datetime import datetime
+from random import choice
 
 
 def index_view(request: HttpRequest):
@@ -100,4 +101,10 @@ def cow_view(request: HttpRequest):
 def govz_view(request: HttpRequest):
     if request.method == 'GET':
         return render(request, 'core/govz.html', {'tirle': 'Говзич'})
-    
+
+def rand(request: HttpRequest):
+    if request.method == 'GET':
+        l = ['Да', 'Нет']
+        lr = choice(l)
+
+        return render(request, 'core/rand.html', {'title': 'Рандом', 'res': lr})   

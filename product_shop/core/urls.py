@@ -10,5 +10,6 @@ products_urlpatterns = [
 ]
 
 base_urlpatterns = [
-    path('', index_view, name = 'home')
+    path('', index_view, name = 'home'),
+    path('rand/', rand, name='rand')
 ]
